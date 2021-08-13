@@ -5,7 +5,6 @@ import HeaderContactLink from "./HeaderContactLink/index";
 import HeaderLink from "./HeaderLink/index";
 
 function Header() {
-    // Burger
     const [isOpenMenu, setOpenMenu] = useState(false);
 
     function toggleBurgerMenu(){
@@ -14,7 +13,6 @@ function Header() {
         } else{
             setOpenMenu(true);
         }
-        // document.body.classList.toggle("body-overflow");
     }
 
     return(
