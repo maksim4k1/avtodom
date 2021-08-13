@@ -1,0 +1,28 @@
+.header {
+    &__menu {
+        height: 100%;
+        display: flex;
+        gap: 50px;
+        align-items: center;
+    }
+
+    &__link{
+        &>a {
+            color: var(--main-grey);
+            font-size: 18px;
+            transition: color 0.3s;
+
+            @media (hover){
+                &:hover{
+                    color: var(--main-black);
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 830px) {
+        &__menu{
+            display: none;
+        }
+    }
+}
