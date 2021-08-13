@@ -13,7 +13,7 @@
         display: flex;
         justify-content: space-between;
     }
-    
+
     &__logo{
         width: 270px;
         height: 55px;
@@ -31,6 +31,26 @@
             align-items: center;
             justify-content: center;
             color: var(--main-white);
+        }
+    }
+
+    &__menu {
+        height: 100%;
+        display: flex;
+        gap: 50px;
+        align-items: center;
+    }
+
+    &__link{
+        &>a {
+            color: var(--main-grey);
+            font-size: 18px;
+            transition: color 0.3s;
+            @media (hover){
+                &:hover{
+                    color: var(--main-black);
+                }
+            }
         }
     }
 }
