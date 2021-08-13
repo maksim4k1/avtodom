@@ -1,0 +1,44 @@
+.header__contacts {
+    &-icon{
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        object-position: center;
+    }
+    &-link{
+        &>a{
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            gap: 10px;
+            color: var(--main-white);
+            transition: all 0.4s;
+
+            &::before{
+                content: "";
+                height: 30px;
+                width: 30px;
+                display: block;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                border-radius: 15px;
+                background: var(--main-bg-blue);
+                transition: all 0.4s;
+                z-index: -1;
+            }
+            @media (hover){
+                &:hover::before{
+                    width: calc(100% + 5px);
+                }
+            }
+        }
+        &_green>a::before{
+            background: var(--main-bg-green);
+        }
+    }
+    &-subtitle{
+        font-size: 18px;
+        font-weight: 700;
+    }
+}

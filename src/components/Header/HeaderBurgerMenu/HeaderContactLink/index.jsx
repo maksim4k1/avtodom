@@ -1,7 +1,7 @@
 import React from "react";
-import style from "../Header.module.scss";
-import phone from "../../../img/svg/contacts/phone-icon.svg";
-import whatsapp from "../../../img/svg/contacts/whatsapp-icon.svg";
+import style from "./HeaderContactLink.module.scss";
+import phone from "../../../../img/svg/contacts/phone-icon.svg";
+import whatsapp from "../../../../img/svg/contacts/whatsapp-icon.svg";
 
 function HeaderContactLink (props) {
     const{type, href, textContent} = props;
