@@ -1,7 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import style from "./Header.module.scss";
-import HeaderLink from "./HeaderLink/HeaderLink";
+import HeaderContactLink from "./HeaderContactLink/index";
+import HeaderLink from "./HeaderLink/index";
 
 function Header() {
     return(
@@ -28,7 +29,9 @@ function Header() {
                             <HeaderLink href="/address" textContent="Адрес" className={style["header__burger-link"]}/>
                         </ul>
                         <div className={style.header__contacts}>
-                            
+                            <HeaderContactLink href="tel:+996556705055" type="phone" textContent="+996 556-70-50-55"/>
+                            <HeaderContactLink href="tel:+996502705055" type="phone" textContent="+996 502-70-50-55"/>
+                            <HeaderContactLink href="https://wa.me/+996556705055" type="whatsapp" textContent="+996 556-70-50-55"/>
                         </div>
                     </nav>
                 </div>
