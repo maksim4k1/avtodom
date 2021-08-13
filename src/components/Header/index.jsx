@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import style from "./Header.module.scss";
 import HeaderContactLink from "./HeaderContactLink/index";
 import HeaderLink from "./HeaderLink/index";
 
 function Header() {
+    // Burger
+    const [isOpenMenu, setOpenMenu] = useState(false);
+
+    function toggleBurgerMenu(){
+        if(isOpenMenu){
+            setOpenMenu(false);
+        } else{
+            setOpenMenu(true);
+        }
+        // document.body.classList.toggle("body-overflow");
+    }
+
     return(
         <header className={style.header}>
             <div className={`${style.header__container} container`}>
@@ -17,10 +29,10 @@ function Header() {
                         <HeaderLink href="/address" textContent="Адрес" className={style.header__link}/>
                     </ul>
                 </nav>
-                <button className={style.header__button}>
+                <button className={style.header__button} onClick={toggleBurgerMenu}>
                     <span></span>
                 </button>
-                <div className={style.header__burger}>
+                <div className={`${style.header__burger} ${isOpenMenu ? style["open-burger-menu"] : ""}`} onClick={toggleBurgerMenu}>
                     <nav className={style["header__burger-navigation"]}>
                         <ul className={style["header__burger-menu"]}>
                             <HeaderLink href="/" textContent="Главная" className={style["header__burger-link"]}/>
