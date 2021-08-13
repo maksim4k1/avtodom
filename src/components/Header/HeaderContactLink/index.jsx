@@ -14,8 +14,8 @@ function HeaderContactLink (props) {
         } else if(type === "whatsapp"){
             return(
                 <a href={href} target="_blank" rel="noreferrer">
-                    <img src="img/svg/contacts/whatsapp-icon.svg" alt="WhatsApp" class={style["header__contacts-icon"]}/>
-                    <h4 class={style["header__contacts-subtitle"]}>{textContent}</h4>
+                    <img src="img/svg/contacts/whatsapp-icon.svg" alt="WhatsApp" className={style["header__contacts-icon"]}/>
+                    <h4 className={style["header__contacts-subtitle"]}>{textContent}</h4>
                 </a>
             );
         }
