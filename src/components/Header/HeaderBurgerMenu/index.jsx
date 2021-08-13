@@ -9,7 +9,7 @@ function HeaderBurgerMenu (props) {
             <nav className={style["header__burger-navigation"]}>
                 <ul className={style["header__burger-menu"]}>
                     <HeaderLink href="/" textContent="Главная" className={style["header__burger-link"]}/>
-                    <HeaderLink href="/parts" textContent="Каталог" className={style["header__burger-link"]}/>
+                    <HeaderLink href="/catalog" textContent="Каталог" className={style["header__burger-link"]}/>
                     <HeaderLink href="/contacts" textContent="Контакты" className={style["header__burger-link"]}/>
                     <HeaderLink href="/address" textContent="Адрес" className={style["header__burger-link"]}/>
                 </ul>
