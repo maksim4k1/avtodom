@@ -1,0 +1,20 @@
+.footer{
+    &__menu {
+        display: flex;
+        flex-flow: column;
+        gap: 15px;
+    }
+    &__item{
+        &>address{
+            font-style: normal;
+        }
+    }
+    &__link {
+        color: var(--main-white);
+        @media (hover) {
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
