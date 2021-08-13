@@ -16,6 +16,9 @@ function Header() {
                         <HeaderLink href="/address" textContent="Адрес"/>
                     </ul>
                 </nav>
+                <button className={style.header__button}>
+                    <span></span>
+                </button>
             </div>
         </header>
     );
